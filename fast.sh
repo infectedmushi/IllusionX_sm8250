@@ -39,7 +39,7 @@ ZIPNAME="${KERNELNAME}.zip"
 	export ARCH=arm64
 	export CROSS_COMPILE=/mnt/Bathtube/toolchains/gcc-linaro-12.0.0-2021.11-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
 	export CROSS_COMPILE_ARM32=/mnt/Bathtube/toolchains/gcc-linaro-11.2.1-20220628-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
-	make O=out mrproper
+#	make O=out mrproper
 	make O=out CC=clang LLVM=1 LLVM_IAS=1 ${DEFCONFIG}
 	make O=out CC=clang AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LLVM=1 LLVM_IAS=1 -j32
 
